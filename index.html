@@ -1,17 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
+  <title>高敬宇 - 个人简历</title>
   <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible"
-    content="ie=edge">
-  <title>Document</title>
+    content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+    href="styles/normalize.css">
+  <link rel="stylesheet"
+    href="styles/index.css">
 </head>
 
 <body>
-  hello world!
+  <div class="container">
+    <main>
+      <header>
+        <section class="title">
+          <h1>高敬宇</h1>
+          <p>Web前端开发</p>
+        </section>
+        <address>
+          <ul class="contact">
+            <li>
+              <span>电话：</span>186-2266-6028</li>
+            <li>
+              <span>邮箱：</span>
+              <a href="mailto://osimly@163.com">osimly@163.com</a>
+            </li>
+            <li>
+              <span>个人主页：</span>
+              <a href="http://osimly.github.io/">http://osimly.github.io/</a>
+            </li>
+            <li>
+              <span>Github：</span>
+              <a href="https://github.com/osimly">https://github.com/osimly</a>
+            </li>
+          </ul>
+        </address>
+      </header>
+      <article class="content">
+        <article>
+          <section class="education">
+            <h2>教育经历</h2>
+            <ul>
+              <li>
+                <div class="edu-placeholder"></div>
+              </li>
+              <li>
+                <span class="edu-circle circle"></span>
+                <span class="edu-title">天津工业大学</span>
+                <span class="edu-year">2007 - 2011</span>
+              </li>
+              <li class="edu-content">
+                专业：
+                <strong>电子信息科学与技术</strong>
+                <br>学历：
+                <strong>本科</strong>
+              </li>
+            </ul>
+          </section>
+          <section class="project">
+            <h2>项目经验</h2>
+            <ul>
+              <li>
+                <dl>
+                  <dt>深圳市彬讯科技有限公司
+                    <time class="range">2016.12 - 2017.11</time>
+                  </dt>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <span class="circle"></span>
+                    <span class="project-name">土巴兔 ERP 管理系统</span>
+                  </dt>
+                  <dd>
+                    <span class="key-point">Vue.js</span>
+                    <span class="key-point">ElementUI</span>
+                    <span class="key-point">ES6</span>
+                    <span class="key-point">Webpack</span>
+                    <dd>
+                      <ul>
+                        <li>参与了系统架构搭建，封装了基于 axios 的数据请求模块</li>
+                        <li>参与了财务模块的开发，推动封装了财务数据处理的 utils 库</li>
+                        <li>针对字典数据多次请求的问题，提出并实现了集中请求、统一管理的方案</li>
+                        <li>业务模块增多后，针对 Webpack 打包速度慢的问题，通过异步模块加载和第三方组件 dll 预封装等方式优化了打包性能</li>
+                      </ul>
+                    </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <span class="circle"></span>
+                    <span class="project-name">T8tUI - 基于 Vue.js2 的业务组件库</span>
+                  </dt>
+                  <dd>
+                    <span class="key-point">Vue.js</span>
+                    <span class="key-point">JSX</span>
+                    <span class="key-point">async-validator</span>
+                    <span class="key-point">SheetJS</span>
+                    <dd>
+                      <ul>
+                        <li>负责 grid-table 组件开发</li>
+                        <li>实现以表格形式显示 JSON 数据并支持编辑和验证功能</li>
+                        <li>实现自定义行、列、单元格的编辑器、样式和验证规则等功能</li>
+                        <li>优化组件性能，实现万条以上数据流畅处理</li>
+                        <li>实现了 Excel 文档导入和导出功能，通过 Web worker 显示导出进度</li>
+                        <li>负责 tree-table 组件开发</li>
+                        <li>通过递归组件实现树形结构数据的显示和编辑</li>
+                      </ul>
+                    </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>深圳动善时网络有限公司（创业公司）
+                    <time class="range">2016.06 - 2016.12</time>
+                  </dt>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <span class="circle"></span>
+                    <span class="project-name">Web 前端开发</span>
+                  </dt>
+                  <dd>
+                    <span class="key-point">ESLint</span>
+                    <span class="key-point">jsbeautify</span>
+                    <span class="key-point">JSDoc</span>
+                    <span class="key-point">Git</span>
+                    <span class="key-point">H5</span>
+                  </dd>
+                  <dd>
+                    <ul>
+                      <li>担任公司前端开发的 Leader，组织6人的前端开发小组进行业务开发</li>
+                      <li>对接产品需求，工作任务分配，项目进度跟进等</li>
+                      <li>制定公司前端开发规范，统一代码风格和 lint 规则，通过编辑器插件自动完成代码格式化</li>
+                      <li>搭建项目的基础框架，完成部分复杂功能的开发</li>
+                      <li>关注技术发展趋势，组织内部分享，提升团队整理能力</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </section>
+        </article>
+        <article>
+          <section class="project">
+            <ul>
+              <li>
+                <dl>
+                  <dt>天津市邮电设计院有限责任公司
+                    <time class="range">2011.09 - 2016.03</time>
+                  </dt>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <span class="circle"></span>
+                    <span class="project-name">室内天线分布工程项目管理系统</span>
+                  </dt>
+                  <dd>
+                    <span class="key-point">ASP.NET</span>
+                    <span class="key-point">C#</span>
+                    <span class="key-point">jQuery</span>
+                    <span class="key-point">devExpress</span>
+                    <span class="key-point">MVC</span>
+                  </dd>
+                  <dd>
+                    <ul>
+                      <li>开发了基站管理、方案审核、物料管理、预算管理等业务模块</li>
+                      <li>开发了 GIS 组件，根据放大级别自动合并标签，修正“火星坐标”，显示真实经纬度等</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </section>
+          <section class="skill">
+            <h2>技能</h2>
+            <dl class="skill-item">
+              <dt>Web前端</dt>
+              <dd>熟练使用
+                <strong>HTML</strong> /
+                <strong>CSS</strong> 进行页面的搭建和布局，熟悉
+                <strong>HTML5</strong> /
+                <strong>CSS3</strong> 新特性</dd>
+              <dd>熟悉
+                <strong>JavaScript</strong> 语言，熟悉
+                <strong>ES6</strong> /
+                <strong>DOM</strong> /
+                <strong>Ajax</strong> 等</dd>
+              <dd>熟悉使用
+                <strong>Vue.js</strong> /
+                <strong>JSX</strong>
+                开发 SPA 应用</dd>
+              <dd>熟悉使用
+                <strong>Webpack</strong> 打包和部署前端应用</dd>
+              <dd>熟悉使用
+                <strong>GitBook</strong> 编写和部署 API 文档</dd>
+              <dd>使用过
+                <strong>Bootstrap</strong> /
+                <strong>jQuery</strong> 等</dd>
+              <dd>对
+                <strong>SVG</strong> /
+                <strong>Canvas</strong> 有一定的使用经验</dd>
+              <dd>使用过
+                <strong>Less</strong> /
+                <strong>Sass</strong>
+              </dd>
+            </dl>
+            <dl class="skill-item">
+              <dt>Web后端</dt>
+              <dd>使用
+                <strong>PHP</strong> +
+                <strong>DedeCMS</strong>
+                开发过内容管理系统</dd>
+              <dd>使用
+                <strong>ASP.NET</strong> 编写过后端程序并使用
+                <strong>ADO.NET</strong> 与数据库交互</dd>
+              <dd>有使用
+                <strong>MySQL</strong> /
+                <strong>SQL Server</strong> 等数据库的经验</dd>
+            </dl>
+            <dl class="skill-item">
+              <dt>其他技能</dt>
+              <dd>英语通过
+                <strong>CET6</strong>，能够阅读英文文档</dd>
+              <dd>能够使用
+                <strong>Photoshop</strong> 和
+                <strong>Illustrator</strong> 完成简单的图像处理和平面设计</dd>
+              <dd>熟悉
+                <strong>Git</strong> 和
+                <strong>SVN</strong> 等版本管理工具的使用
+              </dd>
+            </dl>
+          </section>
+          <section class="award">
+            <h2>获奖记录</h2>
+            <ul>
+              <li class="award-item">2011.06 天津市大学生计算机应用能力竞赛——网页设计类 一等奖</li>
+              <li class="award-item">2010.09 天津工业大学暑期社会实践活动 优秀个人</li>
+              <li class="award-item">2009.11 天津工业大学 优秀学生干部</li>
+              <li class="award-item">2009.04 2009年天津工业大学网络攻防实战演习 优秀个人</li>
+            </ul>
+          </section>
+          <section class="other">
+            <h2>致谢</h2>
+            <ul class="other-item">
+              <li>感谢您花时间阅读我的简历，期待能有机会和您共事。</li>
+            </ul>
+          </section>
+        </article>
+      </article>
+    </main>
+    <footer>© 2017 Gao Jingyu，
+      <a href="doc/resume.pdf">下载 PDF 版本</a>
+    </footer>
+  </div>
 </body>
 
 </html>
