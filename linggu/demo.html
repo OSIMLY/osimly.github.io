@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="author" content="libing">
         <title>钢琴</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
         <style>
             body{background-color:	#42426F;}
             main{margin: 50px auto;
@@ -65,182 +64,40 @@
             <div id="btn1">铃</div>
             <div id="btn2">鼓</div>
         </main>
-       <audio id="audio1" src=""></audio>
-       <audio id="audio2" src=""></audio>
+       <audio id="audio1" src="sound/ling.mp3"></audio>
+       <audio id="audio2" src="sound/gu.mp3"></audio>
     </body>
     <script>
         var audio1=document.getElementById('audio1');
-        audio1.autoplay='autoplay';
+        //audio1.autoplay='autoplay';
         var audio2=document.getElementById('audio2');
-        audio2.autoplay='autoplay';
+        //audio2.autoplay='autoplay';
         //oDiv1
         var oDiv1=document.getElementById('btn1');
         oDiv1.addEventListener('touchstart',function(){
             oDiv1.style.boxShadow='1px 1px 5px red inset';
-            audio1.src='sound/ling.mp3';
+            //audio1.src='sound/ling.mp3';
+            audio1.currentTime = 0;
             audio1.play();
         })
-        oDiv1.addEventListener('mouseup',function(){
+        oDiv1.addEventListener('ontouchend',function(){
             oDiv1.style.boxShadow='none';
+            
+            // audio1.pause();
         })
         //oDiv2
         var oDiv2=document.getElementById('btn2');
         oDiv2.addEventListener('touchstart',function(){
             oDiv2.style.boxShadow='1px 1px 5px orange inset';
-            audio2.src='sound/gu.mp3';
+            //audio2.src='';
+            audio2.currentTime = 0;
             audio2.play();
         })
         var oDiv2=document.getElementById('btn2');
-            oDiv2.addEventListener('mouseup',function(){
+        oDiv2.addEventListener('ontouchend',function(){
             oDiv2.style.boxShadow='none';    
+            
+            // audio2.pause();
         })
-        //oDiv3
-        var oDiv3=document.getElementById('btn3');
-        oDiv3.addEventListener('mousedown',function(){
-            oDiv3.style.boxShadow='1px 1px 5px yellow inset';
-            audio.src='sound/3.oga';
-        })
-        var oDiv3=document.getElementById('btn3');
-        oDiv3.addEventListener('mouseup',function(){
-            oDiv3.style.boxShadow='none';    
-        })
-        //oDiv4
-        var oDiv4=document.getElementById('btn4');
-        oDiv4.addEventListener('mousedown',function(){
-            oDiv4.style.boxShadow='1px 1px 5px green inset';
-            audio.src='sound/4.oga';
-        })
-        var oDiv4=document.getElementById('btn4');
-        oDiv4.addEventListener('mouseup',function(){
-            oDiv4.style.boxShadow='none';    
-        })
-        //oDiv5
-        var oDiv5=document.getElementById('btn5');
-        oDiv5.addEventListener('mousedown',function(){
-            oDiv5.style.boxShadow='1px 1px 5px violet inset';
-            audio.src='sound/5.oga';
-        })
-        var oDiv5=document.getElementById('btn5');
-        oDiv5.addEventListener('mouseup',function(){
-            oDiv5.style.boxShadow='none';    
-        })
-        var oDiv6=document.getElementById('btn6');
-        oDiv6.addEventListener('mousedown',function(){
-            oDiv6.style.boxShadow='1px 1px 5px blue inset';
-            audio.src='sound/6.oga';
-        })
-        var oDiv6=document.getElementById('btn6');
-        oDiv6.addEventListener('mouseup',function(){
-            oDiv6.style.boxShadow='none';    
-        })
-        var oDiv7=document.getElementById('btn7');
-        oDiv7.addEventListener('mousedown',function(){
-            oDiv7.style.boxShadow='1px 1px 5px purple inset';
-            audio.src='sound/7.oga';
-        })
-        var oDiv7=document.getElementById('btn7');
-        oDiv7.addEventListener('mouseup',function(){
-            oDiv7.style.boxShadow='none';    
-        })
-        var oDiv8=document.getElementById('btn8');
-        oDiv8.addEventListener('mousedown',function(){
-            oDiv8.style.boxShadow='1px 1px 8px white inset';
-            audio.src='sound/8.oga';
-        })
-        var oDiv8=document.getElementById('btn8');
-        oDiv8.addEventListener('mouseup',function(){
-            oDiv8.style.boxShadow='none';    
-        })
-        var oDiv9=document.getElementById('btn9');
-        oDiv9.addEventListener('mousedown',function(){
-            oDiv9.style.boxShadow='1px 1px 8px white inset';
-            audio.src='sound/9.oga';
-        })
-        var oDiv9=document.getElementById('btn9');
-        oDiv9.addEventListener('mouseup',function(){
-            oDiv9.style.boxShadow='none';    
-        })
-        var oDiv10=document.getElementById('btn10');
-        oDiv10.addEventListener('mousedown',function(){
-            oDiv10.style.boxShadow='1px 1px 8px white inset';
-            audio.src='sound/7.oga';
-        })
-        var oDiv10=document.getElementById('btn10');
-        oDiv10.addEventListener('mouseup',function(){
-            oDiv10.style.boxShadow='none';    
-        })
-        var oDiv11=document.getElementById('btn11');
-        oDiv11.addEventListener('mousedown',function(){
-            oDiv11.style.boxShadow='1px 1px 8px white inset';
-            audio.src='sound/8.oga';
-        })
-        var oDiv11=document.getElementById('btn11');
-        oDiv11.addEventListener('mouseup',function(){
-            oDiv11.style.boxShadow='none';    
-        })
-        var oDiv12=document.getElementById('btn12');
-        oDiv12.addEventListener('mousedown',function(){
-            oDiv12.style.boxShadow='1px 1px 8px white inset';
-            audio.src='sound/5.oga';
-        })
-        var oDiv12=document.getElementById('btn12');
-        oDiv12.addEventListener('mouseup',function(){
-            oDiv12.style.boxShadow='none';    
-        })
-        //keydown
-        window.onkeydown=function(e){
-           if(e.key=='q'){
-               oDiv1.style.boxShadow='1px 1px 5px red inset';
-               audio.src='sound/1.oga';
-           }else if(e.key=='w') {
-               oDiv2.style.boxShadow='1px 1px 5px orange inset';
-               audio.src='sound/2.oga';
-           }else if(e.key=='e'){
-               oDiv3.style.boxShadow='1px 1px 5px yellow inset';
-               audio.src='sound/3.oga';
-           }else if(e.key=='r'){
-               oDiv4.style.boxShadow='1px 1px 5px green inset';
-               audio.src='sound/4.oga';
-           }else if(e.key=='t'){
-               oDiv5.style.boxShadow='1px 1px 5px violet inset';
-               audio.src='sound/5.oga';
-           }else if(e.key=='y'){
-               oDiv6.style.boxShadow='1px 1px 5px blue inset';
-               audio.src='sound/6.oga';
-           }else if(e.key=='u'){
-               oDiv7.style.boxShadow='1px 1px 5px purple inset';
-               audio.src='sound/7.oga';
-           }else if(e.key==1){
-               oDiv8.style.boxShadow='1px 1px 8px white inset';
-               audio.src='sound/8.oga';
-           }else if(e.key==2){
-                oDiv9.style.boxShadow='1px 1px 8px white inset';
-                audio.src='sound/9.oga';
-           }else if(e.key==3){
-               oDiv10.style.boxShadow='1px 1px 8px white inset';
-               audio.src='sound/7.oga';
-           }else if(e.key==4){
-               oDiv11.style.boxShadow='1px 1px 8px white inset';
-               audio.src='sound/8.oga';
-           }else if(e.key==5){
-               oDiv12.style.boxShadow='1px 1px 8px white inset';
-               audio.src='sound/5.oga';
-           }
-        } 
-        //keyup
-        window.onkeyup=function(e){
-           oDiv1.style.boxShadow='none';
-           oDiv2.style.boxShadow='none';
-           oDiv3.style.boxShadow='none';
-           oDiv4.style.boxShadow='none';
-           oDiv5.style.boxShadow='none';
-           oDiv6.style.boxShadow='none';
-           oDiv7.style.boxShadow='none';
-           oDiv8.style.boxShadow='none';
-           oDiv9.style.boxShadow='none';
-           oDiv10.style.boxShadow='none';
-           oDiv11.style.boxShadow='none';
-           oDiv12.style.boxShadow='none';
-        }
     </script>
 </html>
