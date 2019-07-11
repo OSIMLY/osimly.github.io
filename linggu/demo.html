@@ -1,103 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="author" content="libing">
-        <title>钢琴</title>
-        <style>
-            body{background-color:	#42426F;}
-            main{margin: 50px auto;
-            /*background-color:   #D98719;*/
-            width: 1000px;
-            height: 480px;
-            position: relative;
-            perspective:1200px;
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="libing">
+    <title>钢琴</title>
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+            background-color: #42426F;
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
             text-align: center;
             color: red;
             box-shadow: 2px 2px 10px #42426F;
-            }
-            main div{
-                width: 400px;height: 400px;
-                background-color: white;
-                border: 1px solid black;
-                float: left;
-                box-shadow: 0 0 5px gray;
-                font-style: italic;
-                font-size: 25px;font-family: Calibri;
-            }
-            #btn8{
-                width: 35px;height:220px;
-                background-color: black;
-                position: absolute;font-style: normal;
-                left: 70px;top: 20px;color: white;
-            }
-            #btn9{
-                width: 35px;height:220px;
-                background-color: black;
-                position: absolute;font-style: normal;
-                left: 150px;top: 20px;color: white;
-            }
-            #btn10{
-                width: 35px;height:220px;
-                background-color: black;
-                position: absolute;font-style: normal;
-                left: 308px;top: 20px;color: white;
-            }
-            #btn11{
-                width: 35px;height:220px;
-                background-color: black;
-                position: absolute;font-style: normal;
-                left: 385px;top: 20px;color: white;
-            }
-            #btn12{
-                width: 35px;height:220px;
-                background-color: black;
-                position: absolute;font-style: normal;
-                left:465px;top: 20px;color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div id="btn1">铃</div>
-            <div id="btn2">鼓</div>
-        </main>
-       <audio id="audio1" src="sound/ling.mp3"></audio>
-       <audio id="audio2" src="sound/gu.mp3"></audio>
-    </body>
-    <script>
-        var audio1=document.getElementById('audio1');
-        //audio1.autoplay='autoplay';
-        var audio2=document.getElementById('audio2');
-        //audio2.autoplay='autoplay';
-        //oDiv1
-        var oDiv1=document.getElementById('btn1');
-        oDiv1.addEventListener('touchstart',function(){
-            oDiv1.style.boxShadow='1px 1px 5px red inset';
-            //audio1.src='sound/ling.mp3';
-            audio1.currentTime = 0;
-            audio1.play();
-        })
-        oDiv1.addEventListener('ontouchend',function(){
-            oDiv1.style.boxShadow='none';
-            
-            // audio1.pause();
-        })
-        //oDiv2
-        var oDiv2=document.getElementById('btn2');
-        oDiv2.addEventListener('touchstart',function(){
-            oDiv2.style.boxShadow='1px 1px 5px orange inset';
-            //audio2.src='';
-            audio2.currentTime = 0;
-            audio2.play();
-        })
-        var oDiv2=document.getElementById('btn2');
-        oDiv2.addEventListener('ontouchend',function(){
-            oDiv2.style.boxShadow='none';    
-            
-            // audio2.pause();
-        })
-    </script>
+        }
+
+        main div {
+            width: 45%;
+            height: 45%;
+            background-color: white;
+            border: 1px solid black;
+            float: left;
+            box-shadow: 0 0 5px gray;
+            font-style: italic;
+            font-size: 25px;
+            font-family: Calibri;
+        }
+
+        #btn8 {
+            width: 35px;
+            height: 220px;
+            background-color: black;
+            position: absolute;
+            font-style: normal;
+            left: 70px;
+            top: 20px;
+            color: white;
+        }
+
+        #btn9 {
+            width: 35px;
+            height: 220px;
+            background-color: black;
+            position: absolute;
+            font-style: normal;
+            left: 150px;
+            top: 20px;
+            color: white;
+        }
+
+        #btn10 {
+            width: 35px;
+            height: 220px;
+            background-color: black;
+            position: absolute;
+            font-style: normal;
+            left: 308px;
+            top: 20px;
+            color: white;
+        }
+
+        #btn11 {
+            width: 35px;
+            height: 220px;
+            background-color: black;
+            position: absolute;
+            font-style: normal;
+            left: 385px;
+            top: 20px;
+            color: white;
+        }
+
+        #btn12 {
+            width: 35px;
+            height: 220px;
+            background-color: black;
+            position: absolute;
+            font-style: normal;
+            left: 465px;
+            top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="btn1">铃</div>
+        <div id="btn2">鼓</div>
+    </main>
+    <audio id="audio1" src="sound/ling.mp3"></audio>
+    <audio id="audio2" src="sound/gu.mp3"></audio>
+</body>
+<script>
+    var audio1 = document.getElementById('audio1');
+    //audio1.autoplay='autoplay';
+    var audio2 = document.getElementById('audio2');
+    //audio2.autoplay='autoplay';
+    //oDiv1
+    var oDiv1 = document.getElementById('btn1');
+    oDiv1.addEventListener('touchstart', function () {
+        oDiv1.style.boxShadow = '1px 1px 5px red inset';
+        //audio1.src='sound/ling.mp3';
+        audio1.currentTime = 0;
+        audio1.play();
+    })
+    oDiv1.addEventListener('ontouchend', function () {
+        oDiv1.style.boxShadow = 'none';
+
+        // audio1.pause();
+    })
+    //oDiv2
+    var oDiv2 = document.getElementById('btn2');
+    oDiv2.addEventListener('touchstart', function () {
+        oDiv2.style.boxShadow = '1px 1px 5px orange inset';
+        //audio2.src='';
+        audio2.currentTime = 0;
+        audio2.play();
+    })
+    var oDiv2 = document.getElementById('btn2');
+    oDiv2.addEventListener('ontouchend', function () {
+        oDiv2.style.boxShadow = 'none';
+
+        // audio2.pause();
+    })
+</script>
+
 </html>
